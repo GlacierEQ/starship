@@ -1,4 +1,4 @@
-[Retourner aux préréglages](./#pastel-powerline)
+[Retourner aux préréglages](./#tokyo-night)
 
 # Tokyo Night Preset
 
@@ -16,6 +16,6 @@ This preset is inspired by [tokyo-night-vscode-theme](https://github.com/enkia/t
 starship preset tokyo-night -o ~/.config/starship.toml
 ```
 
-[Click to download TOML](/presets/toml/tokyo-night.toml){download}
+[Cliquez pour télécharger TOML](/presets/toml/tokyo-night.toml){download}
 
 <<< @/public/presets/toml/tokyo-night.toml

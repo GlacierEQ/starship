@@ -23,16 +23,10 @@ choco install starship
 
 ## [termux](https://termux.com)
 
-### Benodigdheden
-
-```sh
-pkg install getconf
-```
-
 ### Installatie
 
 ```sh
-curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir /data/data/com.termux/files/usr/bin
+pkg install starship
 ```
 
 ## [Funtoo Linux](https://www.funtoo.org/Welcome)
@@ -63,7 +57,7 @@ Activeer de `programs.starship` module in het `home.nix` bestand en voeg je inst
 {
   programs.starship = {
     enable = true;
-    # Configuration written to ~/.config/starship.toml
+    # Configuratie geschreven naar ~/.config/starship.toml
     settings = {
       # add_newline = false;
 

@@ -23,23 +23,17 @@ choco install starship
 
 ## [termux](https://termux.com)
 
-### Обязательные требования
-
-```sh
-pkg install getconf
-```
-
 ### Установка
 
 ```sh
-curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir /data/data/com.termux/files/usr/bin
+pkg install starship
 ```
 
 ## [Funtoo Linux](https://www.funtoo.org/Welcome)
 
 ### Установка
 
-На Funtoo Linux, starship может быть установлен из <0>core-kit</0> с помощью Portage:
+На Funtoo Linux, starship может быть установлен из `core-kit` с помощью Portage:
 
 ```sh
 emerge app-shells/starship
@@ -57,7 +51,7 @@ nix-env -iA nixos.starship
 
 #### Декларативно, для одного пользователя, используя [home-manager](https://github.com/nix-community/home-manager)
 
-Включите модуль <0>programs.starship</0> в ваш файл <0>home.nix</0> и добавьте ваши настройки
+Включите модуль `programs.starship` в ваш файл `home.nix` и добавьте ваши настройки
 
 ```nix
 {

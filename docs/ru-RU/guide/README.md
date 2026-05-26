@@ -161,14 +161,14 @@
   align="right"
  />
 
-**Минималистичное, быстрое и бесконечно настраиваемое приглашение командной строки для любой оболочки!**
+**Минималистичный, сверхбыстрый и полностью настраиваемый промпт для любой оболочки!**
 
-- **Быстрая:** она быстрая – _очень-очень_ быстрая! 🚀
-- **Настраиваемая:** настройте каждый элемент вашей командной строки.
-- **Универсальная:** работает с любой оболочкой, на любой операционной системе.
-- **Умная:** сразу показывает соответствующую информацию.
+- **Быстрый:** он быстрый – _очень-очень_ быстрый! 🚀
+- **Настраиваемый:** настройте каждый элемент вашей командной строки.
+- **Универсальный:** работает с любой оболочкой, на любой операционной системе.
+- **Умный:** сразу показывает соответствующую информацию.
 - **Много функций:** поддержка всех ваших любимых инструментов.
-- **Легкая:** быстрая установка - начните использовать ее в считанные минуты.
+- **Легкий:** быстрая установка - начните использовать его в считанные минуты.
 
 <p align="center">
 <a href="https://starship.rs/config/"><strong>Изучите документацию Starship&nbsp;&nbsp;▶</strong></a>
@@ -230,9 +230,10 @@ curl -sS https://starship.rs/install.sh | sh
 | Arch Linux         | [Arch Linux Extra](https://archlinux.org/packages/extra/x86_64/starship)                        | `pacman -S starship`                                                           |
 | CentOS 7+          | [Copr](https://copr.fedorainfracloud.org/coprs/atim/starship)                                   | `dnf copr enable atim/starship` <br /> `dnf install starship` |
 | Debian 13+         | [Debian Main](https://sources.debian.org/src/starship/1.22.1-1/)                                | `apt install starship`                                                         |
+| Fedora 40+         | [Copr](https://copr.fedorainfracloud.org/coprs/atim/starship)                                   | `dnf copr enable atim/starship` <br /> `dnf install starship` |
 | Gentoo             | [Gentoo Packages](https://packages.gentoo.org/packages/app-shells/starship)                     | `emerge app-shells/starship`                                                   |
 | Manjaro            |                                                                                                 | `pacman -S starship`                                                           |
-| NixOS              | [nixpkgs](https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/misc/starship/default.nix)    | `nix-env -iA nixpkgs.starship`                                                 |
+| NixOS              | [nixpkgs](https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/st/starship/package.nix)    | `nix-env -iA nixpkgs.starship`                                                 |
 | openSUSE           | [OSS](https://software.opensuse.org/package/starship)                                           | `zypper in starship`                                                           |
 | Ubuntu 25.04+      | [Ubuntu Universe](https://packages.ubuntu.com/source/plucky/starship)                           | `apt install starship`                                                         |
 | Void Linux         | [Void Linux Packages](https://github.com/void-linux/void-packages/tree/master/srcpkgs/starship) | `xbps-install -S starship`                                                     |
@@ -278,7 +279,7 @@ curl -sS https://starship.rs/install.sh | sh
 
 ### Шаг 2. Настройте оболочку для использования Starship
 
-Настройте оболочку для инициализации starship. Выберете вашу оболочку из списка:
+Настройте оболочку для инициализации starship. Выберите вашу оболочку из списка:
 
 <details>
 <summary>Bash</summary>
@@ -305,13 +306,13 @@ load(io.popen('starship init cmd'):read("*a"))()
 <details>
 <summary>Elvish</summary>
 
-Добавьте следующую строку в конец `~/.elvish/rc.elv`:
+Add the following to the end of `~/.config/elvish/rc.elv` (`%AppData%\elvish\rc.elv` on Windows):
 
 ```sh
 eval (starship init elvish)
 ```
 
-Примечание: поддерживается только Elvish v0.18+
+Note: Only Elvish v0.18+ is supported. For elvish versions prior to v0.21.0 the config file might instead be `~/.elvish/rc.elv`
 
 </details>
 
@@ -407,15 +408,15 @@ eval "$(starship init zsh)"
 
 ## 🤝 Помощь
 
-Мы всегда ищем помощь людей **всех уровней навыков**! Если вы хотите облегчить свой путь к проекту, посмотрите хорошие первые ошибки ([first good issue](https://github.com/starship/starship/labels/🌱%20good%20first%20issue)).
+Мы всегда ищем помощь людей **всех уровней навыков**! If you're looking to ease your way into the project, try out a [good first issue](https://github.com/starship/starship/issues?q=state%3Aopen%20label%3A%22%F0%9F%8C%B1%20good%20first%20issue%22).
 
 Если Вы свободно владеете иностранным языком отличным от английского, мы высоко оценим любую помощь в переводе нашей документации на другие языки и поддержании ее в актуальном состоянии. Если вы хотите помочь, переводы могут быть сделаны на платформе [Starship Crowdin](https://translate.starship.rs/).
 
-Если вы хотите помочь в создании Starship, пожалуйста, ознакомьтесь с нашим [Руководством по содействию](https://github.com/starship/starship/blob/master/CONTRIBUTING.md). Кроме того, заходите на наш [Discord сервер](https://discord.gg/8Jzqu3T) и поздоровайтесь. 👋
+Если вы хотите помочь в создании Starship, пожалуйста, ознакомьтесь с нашим [Руководством по содействию](https://github.com/starship/starship/blob/master/CONTRIBUTING.md). Также заходите на наш [Discord-сервер](https://discord.gg/8Jzqu3T) - будем рады пообщаться. 👋
 
 ## 💭 Вдохновение
 
-Пожалуйста, ознакомьтесь с этими предыдущими работами, которые помогли вдохновить создание Starship. 🙏
+Пожалуйста, ознакомьтесь с предыдущими проектами, которые вдохновили на создание Starship. 🙏
 
 - **[denysdovhan/spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)** – ZSH промпт для космонавтов.
 

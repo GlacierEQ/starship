@@ -1,4 +1,5 @@
 # version: 1.0.0
+"$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = true
 continuation_prompt = "[▸▹ ](dimmed white)"
@@ -40,6 +41,7 @@ $elixir\
 $elm\
 $erlang\
 $fennel\
+$fortran\
 $golang\
 $guix_shell\
 $haskell\
@@ -50,8 +52,10 @@ $julia\
 $kotlin\
 $gradle\
 $lua\
+$maven\
 $nim\
 $nodejs\
+$bun\
 $ocaml\
 $opa\
 $perl\
@@ -216,6 +220,10 @@ version_format = "${raw}"
 detect_files = ["package-lock.json", "yarn.lock"]
 detect_folders = ["node_modules"]
 detect_extensions = []
+
+[bun]
+format = " [bun](italic) [◫ ($version)](bold bright-green)"
+version_format = "${raw}"
 
 [python]
 format = " [py](italic) [${symbol}${version}]($style)"

@@ -114,7 +114,7 @@ onMounted(() => {
    ```
 
 
-   #### Powershell
+   #### PowerShell
 
    Thêm đoạn sau vào cuối tệp tin `Microsoft.PowerShell_profile.ps1`. Bạn có thể kiểm tra vị trí tệp tin này bằng việc truy xuất biến `$PROFILE` trong PowerShell. Thông thường, đường dẫn là `~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1` hoặc `~/.config/powershell/Microsoft.PowerShell_profile.ps1` trên -Nix.
 
@@ -136,19 +136,16 @@ onMounted(() => {
 
    #### Elvish
 
-   ::: warning
+   > [!CẢNH BÁO] Chỉ elvish v0.18 hoặc cao hơn được hỗ trợ.
 
-   Chỉ hỗ trợ elvish từ phiên bản 0.18 trở lên.
-
-   :::
-
-   Thêm đoạn sau vào cuối tệp tin `~/.elvish/rc.elv`:
+   Thêm các dòng sau vào cuối tệp `~/.config/elvish/rc.elv` (`%AppData%\elvish\rc.elv` trên Windows):
 
    ```sh
    # ~/.elvish/rc.elv
 
    eval (starship init elvish)
    ```
+   Đối với các phiên bản elvish trước v0.21.0 tệp cấu hình có thể là `~/.elvish/rc.elv`
 
 
    #### Tcsh
@@ -164,13 +161,9 @@ onMounted(() => {
 
    #### Nushell
 
-   ::: warning
+   > [!CẢNH BÁO] Điều này có thể thay đổi trong tương lai. Chỉ hỗ trợ nushell từ phiên bản 0.96 trở lên.
 
-   Điều này có thể thay đổi trong tương lai. Chỉ hỗ trợ nushell từ phiên bản 0.96 trở lên.
-
-   :::
-
-   Add the following to the end of your Nushell configuration (find it by running `$nu.config-path` in Nushell):
+   Thêm những dòng sau vào cuối tệp cấu hình Nushell (tìm bằng cách chạy `$nu.config-path` trong Nushell):
 
    ```sh
    mkdir ($nu.data-dir | path join "vendor/autoload")

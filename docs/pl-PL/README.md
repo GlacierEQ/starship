@@ -114,7 +114,7 @@ onMounted(() => {
    ```
 
 
-   #### Powershell
+   #### PowerShell
 
    Dodaj na koniec pliku `Microsoft.PowerShell_profile.ps1`. Możesz sprawdzić lokalizację tego pliku odczytując zmienną środowiskową `$PROFILE` w PowerShell. Zazwyczaj jest to `~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1` lub `~/.config/powershell/Microsoft.PowerShell_profile.ps1` na -Nixie.
 
@@ -136,19 +136,16 @@ onMounted(() => {
 
    #### Elvish
 
-   ::: warning
+   > [!WARNING] Only elvish v0.18 or higher is supported.
 
-   Działa tylko dla elvish v0.18 albo wyższej wersji.
-
-   :::
-
-   Dodaj na koniec pliku `~/.elvish/rc.elv`:
+   Dodaj następujący fragment na końcu pliku `~/.config/elvish/rc.elv` (`%AppData%\elvish\rc.elv` w systemie Windows):
 
    ```sh
    # ~/.elvish/rc.elv
 
    eval (starship init elvish)
    ```
+   W wersjach elvish starszych niż v0.21.0 plik konfiguracyjny może znajdować się w lokalizacji `~/.elvish/rc.elv`.
 
 
    #### Tcsh
@@ -164,13 +161,9 @@ onMounted(() => {
 
    #### Nushell
 
-   ::: warning
+   > [!WARNING] This will change in the future. Działa tylko na Nushell v0.96+.
 
-   Ten sposób zmieni się w przyszłości. Działa tylko na Nushell v0.96+.
-
-   :::
-
-   Add the following to the end of your Nushell configuration (find it by running `$nu.config-path` in Nushell):
+   Dodaj następujący fragment na końcu konfiguracji Nushell (znajdziesz go, uruchamiając polecenie `$nu.config-path` w Nushell):
 
    ```sh
    mkdir ($nu.data-dir | path join "vendor/autoload")

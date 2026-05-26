@@ -230,9 +230,10 @@ curl -sS https://starship.rs/install.sh | sh
 | Arch Linux         | [Arch Linux Extra](https://archlinux.org/packages/extra/x86_64/starship)                     | `pacman -S starship`                                                           |
 | CentOS 7+          | [Copr](https://copr.fedorainfracloud.org/coprs/atim/starship)                                | `dnf copr enable atim/starship` <br /> `dnf install starship` |
 | Debian 13+         | [Debian Main](https://sources.debian.org/src/starship/1.22.1-1/)                             | `apt install starship`                                                         |
+| Fedora 40+         | [Copr](https://copr.fedorainfracloud.org/coprs/atim/starship)                                | `dnf copr enable atim/starship` <br /> `dnf install starship` |
 | Gentoo             | [Gentoo 패키지](https://packages.gentoo.org/packages/app-shells/starship)                       | `emerge app-shells/starship`                                                   |
 | Manjaro            |                                                                                              | `pacman -S starship`                                                           |
-| NixOS              | [nixpkgs](https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/misc/starship/default.nix) | `nix-env -iA nixpkgs.starship`                                                 |
+| NixOS              | [nixpkgs](https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/st/starship/package.nix) | `nix-env -iA nixpkgs.starship`                                                 |
 | openSUSE           | [OSS](https://software.opensuse.org/package/starship)                                        | `zypper in starship`                                                           |
 | Ubuntu 25.04+      | [Ubuntu Universe](https://packages.ubuntu.com/source/plucky/starship)                        | `apt install starship`                                                         |
 | Void Linux         | [Void Linux 패키지](https://github.com/void-linux/void-packages/tree/master/srcpkgs/starship)   | `xbps-install -S starship`                                                     |
@@ -305,13 +306,13 @@ load(io.popen('starship init cmd'):read("*a"))()
 <details>
 <summary>Elvish</summary>
 
-`~/.elvish/rc.elv` 의 끝부분에 아래 라인을 추가:
+Add the following to the end of `~/.config/elvish/rc.elv` (`%AppData%\elvish\rc.elv` on Windows):
 
 ```sh
 eval (starship init elvish)
 ```
 
-알림: Elvish v0.18 버전 이상에서만 지원됩니다.
+Note: Only Elvish v0.18+ is supported. For elvish versions prior to v0.21.0 the config file might instead be `~/.elvish/rc.elv`
 
 </details>
 
@@ -407,7 +408,7 @@ Starship을 추가로 커스터마이징 하고싶다면:
 
 ## 🤝 기여하기
 
-우리는 언제나 **기술 수준에 관계없이** 기여자를 찾고 있습니다! 프로젝트에 참여하고자 한다면, [good first issue](https://github.com/starship/starship/labels/🌱%20good%20first%20issue) 를 보내보세요.
+우리는 언제나 **기술 수준에 관계없이** 기여자를 찾고 있습니다! If you're looking to ease your way into the project, try out a [good first issue](https://github.com/starship/starship/issues?q=state%3Aopen%20label%3A%22%F0%9F%8C%B1%20good%20first%20issue%22).
 
 영어 이외의 언어에 유창하시다면, 저희 문서를 다른 언어로 최신화하는 데 도움을 주시면 대단히 감사하겠습니다. 번역에 도움을 주고자 한다면, [Starship Crowdin](https://translate.starship.rs/) 에서 기여할 수 있습니다.
 

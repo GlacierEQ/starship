@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: Home
 hero:
   image: /logo.svg
   text:
@@ -114,7 +114,7 @@ onMounted(() => {
    ```
 
 
-   #### Powershell
+   #### PowerShell
 
    Füge das Folgende ans Ende von `Microsoft.PowerShell_profile.ps1` an. Du kannst den Speicherort dieser Datei überprüfen, indem du die `$PROFILE` Variable in PowerShell abfragst. Normalerweise ist der Pfad `~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1` oder `~/.config/powershell/Microsoft.PowerShell_profile.ps1` auf -Nix.
 
@@ -136,19 +136,16 @@ onMounted(() => {
 
    #### Elvish
 
-   ::: warning
+   > [!WARNUNG] Nur elvish v0.18 oder höher wird unterstützt.
 
-   Es wird nur elvish v0.18 oder höher unterstützt.
-
-   :::
-
-   Trage folgendes am Ende von `~/.config/fish/rc.elv` ein:
+   Add the following to the end of `~/.config/elvish/rc.elv` (`%AppData%\elvish\rc.elv` on Windows):
 
    ```sh
    # ~/.elvish/rc.elv
 
    eval (starship init elvish)
    ```
+   For elvish versions prior to v0.21.0 the config file might instead be `~/.elvish/rc.elv`
 
 
    #### Tcsh
@@ -164,11 +161,7 @@ onMounted(() => {
 
    #### Nushell
 
-   ::: warning
-
-   Das wird sich in Zukunft ändern. Nur Nushell v0.96+ wird unterstützt.
-
-   :::
+   > [!WARNUNG] Dies wird sich in Zukunft ändern. Nur Nushell v0.96+ wird unterstützt.
 
    Add the following to the end of your Nushell configuration (find it by running `$nu.config-path` in Nushell):
 

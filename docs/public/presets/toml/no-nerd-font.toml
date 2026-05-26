@@ -1,3 +1,8 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[azure]
+symbol = "☁️ "
+
 [battery]
 full_symbol = "• "
 charging_symbol = "⇡ "
@@ -13,6 +18,3 @@ symbol = "[⬢](bold green) "
 
 [pulumi]
 symbol = "🧊 "
-
-[typst]
-symbol = "t "
